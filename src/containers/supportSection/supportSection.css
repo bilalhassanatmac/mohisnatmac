@@ -1,0 +1,61 @@
+.service-section-main {
+    background-color: var(--white-color-shade-v1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.service-section-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+.service-section-sub::after {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images//illustration/gears.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: -1%;
+    transform: scale(1);
+}
+.service-section-sub .left-section {
+    flex: 2;
+}
+
+.service-section-sub .right-section {
+    flex: 2;
+    line-height: 1.4;
+}
+
+.service-section-sub .right-section .subtext {
+    color: var(--blue-color-shade-v3);
+    font-weight: bold;
+    font-size: var(--text);
+}
+
+.service-section-sub .right-section .info {
+    line-height: 1.6;
+    margin-top: 18px;
+}
+
+.service-section-sub .right-section .info ul {
+    margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+    .service-section-main {
+        background-color: #263238;
+        color: var(--white-color-shade-v2);
+        text-align: center;
+
+    }
+    .service-section-sub .left-section {
+        display: none;
+    }
+}

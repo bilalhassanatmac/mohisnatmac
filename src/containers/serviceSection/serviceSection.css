@@ -1,0 +1,39 @@
+.services-section {
+    background-color: var(--dark-color-shade-v1);
+    color: var(--text-color);
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+.services-section::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-25%);
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url("../../images/illustration/globe.svg");
+    z-index: -1;
+    opacity: 0.2;
+    transform: scale(1.5);
+}
+.services-section-header p {
+    font-size: var(--text);
+}
+.services-section-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .services-section-header {
+        text-align: center;
+    }
+}

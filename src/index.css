@@ -1,0 +1,256 @@
+:root {
+  --primary-color: #222F5A;
+  --white-color-shade-v1: #FFFFFF;
+  --white-color-shade-v2: #E7EDF8;
+  --blue-color-shade-v1: #0d6efd;
+  --blue-color-shade-v2: #044bb6;
+  --blue-color-shade-v3: #104cba;
+  --blue-color-shade-v4: #265CBE;
+  --blue-color-shade-v5: #091d3e;
+  --dark-color-shade-v1: #0E1E2A;
+  --dark-color-shade-v2: #1d2c38;
+  --dark-color-shade-v3: #bdc2cb;
+  --text-color: #ffffff;
+  --border-color: #4e597b;
+  --header1: calc(6rem + 1vw);
+  --header2: calc(3.5rem + 1vw);
+  --header3: calc(2.4rem + 1vw);
+  --header4: calc(0.8rem + 1vw);
+  --text: calc(0.5rem + 1vw);
+  --text-small: calc(0.2rem + 1vw);
+  --text-big: calc(6rem + 1vw);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* animation */
+
+
+/*  */
+
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0044bb;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0044bb;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #000000;
+}
+::-webkit-scrollbar-track:active {
+  background: #000000;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: var(--text);
+}
+
+h1 {
+  font-size: var(--header1);
+}
+
+h2 {
+  font-size: var(--header2);
+}
+
+h3 {
+  font-size: var(--header3);
+}
+
+h4,
+h5 {
+  font-size: var(--header4);
+}
+
+ul {
+  list-style: none;
+  color: unset;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+}
+
+/* HELPERS */
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.button {
+  font-size: var(--text);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-small-ex {
+  padding: 0.6rem 0.4rem;
+  height: 40px;
+  font-size: 15px;
+  width: 7rem;
+}
+
+.button-small {
+  padding: 0.6rem 3.8rem;
+  height: 80px;
+  font-size: 2.4rem;
+  /* width: 20rem; */
+}
+
+.button-big {
+  padding: 5.2rem 3.4rem;
+  font-size: 2.8rem;
+  line-height: 18px;
+  font-weight: 500;
+  height: 60px;
+  /* width: 2.4rem; */
+}
+
+.button-blue {
+  color: var(--white-color-shade-v1);
+  background-color: var(--blue-color-shade-v1);
+}
+.button-blue:hover {
+  color: var(--white-color-shade-v1);
+  background-color: #2451a6;
+}
+.button-purple {
+  background-color: var(--color-purple-1);
+  border: 2px solid var(--color-purple-1);
+}
+.button-purple:hover {
+  border: 2px solid var(--color-white);
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+}
+.button-white {
+  background-color: var(--color-white);
+  color: var(--color-dark-1);
+  border: 2px solid var(--color-white);
+  transition: all 0.2s ease-in-out;
+}
+.button-white:hover {
+  background-color: transparent;
+  color: var(--color-white);
+}
+.button-green {
+  background-color: transparent;
+  border: 2px solid var(--color-green-1);
+  transition: all 0.2s ease-in-out;
+}
+.button-green:hover {
+  background-color: var(--color-green-1);
+}
+.section-padding {
+  padding: 20rem 0;
+}
+
+.section-padding-top {
+  padding-top: 10rem;
+}
+.section-padding-bottom {
+  padding-bottom: 5rem;
+}
+
+
+.section-margin {
+  margin: 50px 0;
+}
+
+
+
+/* MEDIA QUARIES */
+
+@media (max-width: 750px) {
+  .section-padding {
+    padding: 3.4rem 3.4rem;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 40%;
+  }
+  .button-small {
+    padding: 0.2rem 1.4rem;
+  }
+  .button-big {
+    padding: 1.2rem 2.4rem;
+  }
+}
+@media (max-width: 550px) {
+  .button-big {
+    height: auto;
+  }
+  .button-small {
+    height: auto;
+    width: auto;
+    padding: 1.2rem 2.4rem;
+  }
+  .button-small-ex {
+      width: 15rem;
+  }
+}
+@media (max-width: 425px) {
+  .container {
+      padding: 0;
+  }
+}
